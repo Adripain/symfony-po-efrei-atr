@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un Chercheur{% endblock %}
+
+{% block body %}
+    <h1>Modifier un Chercheur</h1>
+    <form method="post">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" value="{{ researcher.name }}" required>
+
+        <label for="specialization">Spécialisation :</label>
+        <input type="text" id="specialization" name="specialization" value="{{ researcher.specialization }}" required>
+
+        <button type="submit">Enregistrer les modifications</button>
+    </form>
+    <a href="{{ path('researcher_list') }}">Retour à la liste</a>
+{% endblock %}

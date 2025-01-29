@@ -1,0 +1,11 @@
+<h1>Créer une nouvelle collaboration</h1>
+<form method="post">
+    <label for="title">Titre :</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description">Description :</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <button type="submit">Créer</button>
+</form>
+<a href="{{ path('collaboration_list') }}">Retour à la liste</a>

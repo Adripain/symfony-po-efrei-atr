@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Institutions{% endblock %}
+
+{% block body %}
+    <h1>Collaborations</h1>
+    <ul>
+        {% for collaboration in collaborations %}
+            <li>
+                <strong>{{ collaboration.title }}</strong>: {{ collaboration.description }}
+            </li>
+        {% else %}
+            <li>Aucune collaboration trouvée.</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('collaboration_create') }}">Créer une nouvelle collaboration</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Institutions{% endblock %}
+
+{% block body %}
+    <h1>Liste des Institutions</h1>
+    <ul>
+        {% for institution in institutions %}
+            <li>
+                <strong>{{ institution.name }}</strong> - {{ institution.address }}<br>
+                Gestionnaire : {{ institution.manager }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('institution_create') }}" class="btn btn-primary">Ajouter une institution</a>
+{% endblock %}

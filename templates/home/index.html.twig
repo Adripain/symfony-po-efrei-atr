@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur la plateforme scientifique</h1>
+    <p>Choisissez votre sections :</p>
+    <ul>
+        <li><a href="{{ path('collaboration_list') }}" class="btn btn-primary">Collaborations</a></li>
+        <li><a href="{{ path('researcher_list') }}" class="btn btn-primary">Chercheurs</a></li>
+        <li><a href="{{ path('institution_list') }}" class="btn btn-primary">Institutions</a></li>
+    </ul>
+{% endblock %}

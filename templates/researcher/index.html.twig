@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Chercheurs{% endblock %}
+
+{% block body %}
+    <h1>Liste des Chercheurs</h1>
+    <ul>
+        {% for researcher in researchers %}
+            <li>
+                <a href="{{ path('researcher_view', {id: researcher.id}) }}">
+                    {{ researcher.name }} ({{ researcher.specialization }})
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('researcher_create') }}">Ajouter un nouveau chercheur</a>
+{% endblock %}
